@@ -191,14 +191,14 @@ def ml():
         text.insert(INSERT,"Model Loaded\n")
         text.insert(INSERT,"GLAUCOMA")
         text.pack()
-        account_sid = 'AC681c3e2f099c76d20de81d3d64cefd78'
-        auth_token = '94c14aafe0c8f4b6b42734607372cc88'
+        account_sid = '--------------------------------'
+        auth_token = '-------------------------------------'
         client = Client(account_sid, auth_token)
         message = client.messages \
         .create(
                 body="You are affected by glaucoma",
-                from_='+13203005724',
-                to='+918296986769'
+                from_='------------',
+                to='---------------'
                 )
         print(message.sid)        
     elif (DL and Ip) == 0:
@@ -209,14 +209,14 @@ def ml():
         text.insert(INSERT,"Model Loaded\n")
         text.insert(INSERT,"NORMAL")
         text.pack()      
-        account_sid = 'AC681c3e2f099c76d20de81d3d64cefd78'
-        auth_token = '94c14aafe0c8f4b6b42734607372cc88'
+        account_sid = '-----------------------------'
+        auth_token = '----------------------------'
         client = Client(account_sid, auth_token)
         message = client.messages \
         .create(
                 body="You are Normal",
-                from_='+13203005724',
-                to='+918296986769'
+                from_='-----------',
+                to='-----------------'
                 )
         print(message.sid)
     else:
@@ -233,8 +233,8 @@ def ml():
         message = client.messages \
         .create(
                 body="You are a Suspect",
-                from_='+13203005724',
-                to='+918296986769'
+                from_='-------------',
+                to='-------------'
                 )
         print(message.sid)
     k=cv2.imread('C:\\Users\\Puneeths\\Desktop\\Final project\\working1\\Accuracy.jpeg')
