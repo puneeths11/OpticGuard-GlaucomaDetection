@@ -107,79 +107,9 @@ cv2.imshow('original', orig)
 cv2.imshow('cup to disc', image)
 
 
-from keras.models import load_model
-from PIL import Image
-from keras.preprocessing import image
-import numpy as np
-import cv2
-#from keras.preprocessing.image import ImageDataGenerator
-
-
-
-#train_datagen = ImageDataGenerator(rescale = 1./255,
-#shear_range = 0.2,
-#zoom_range = 0.2,
-#horizontal_flip = True)
-#training_set = train_datagen.flow_from_directory('C:\\Users\\Navyashree HC\\Documents\\navya\\glaucoma project\\Final project\\datasets\\train\\',
-#target_size = (240,240),
-#batch_size = 32,
-#class_mode = 'binary')
-
-#target_size = (240,240)
-model=load_model('C:\\Users\\Puneeths\\Desktop\\Final project\\Final project\\glaucoma.h5')
-print("model loaded")
-
-
-test_image = image.load_img('C:\\Users\\Puneeths\\Desktop\\Final project\\datasets\\test\\glau\\1 (12).png', target_size = (240,240))
-test_image = image.img_to_array(test_image)
-test_image = np.expand_dims(test_image, axis = 0)
-result = model.predict(test_image)
-#training_set.class_indices
-if result[0][0] != 1:
-   DL = 1       #glaucoma
-else:
-   DL = 0       #normal
-        
-
-if (DL and IP) == 1:
-   print("{} and {}".format(str(DL),str(IP)))
-   print("glaucoma")
-   
-#        account_sid = 'AC681c3e2f099c76d20de81d3d64cefd78'
-#    auth_token = '94c14aafe0c8f4b6b42734607372cc88'
-#    client = Client(account_sid, auth_token)
-#
-#    message = client.messages \
-#                          .create(
-#                             body="you are affected by glaucoma",
-#                             from_='+13203005724',
-#                             to='+918296986769'
-#                           )
-#
-#    print(message.sid)
-#        
-elif (DL and IP) == 0:
-     print("{} and {}".format(str(DL),str(IP)))
-     print("normal")
-
-#    account_sid = 'AC681c3e2f099c76d20de81d3d64cefd78'
-#    auth_token = '94c14aafe0c8f4b6b42734607372cc88'
-#    client = Client(account_sid, auth_token)
-#
-#    message = client.messages \
-#                          .create(
-#                             body="normal",
-#                             from_='+13203005724',
-#                             to='+918296986769'
-#                           )
-#
-#    print(message.sid)
-#        
-else:
-    print("{} and {}".format(str(DL),str(IP)))
-    print("suspect")
-
-cv2.waitKey(0)
-cv2.destroyAllWindows()    
-
-        
+# ╔════════════════════════════════════════╗
+# ║          FOR THE FULL CODE/PROJECT     ║
+# ║           CONTACT:                     ║
+# ║           PUNEETHSPUNII@GMAIL.COM      ║
+# ║           +918296986769                ║
+# ╚════════════════════════════════════════╝

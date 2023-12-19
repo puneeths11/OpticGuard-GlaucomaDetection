@@ -201,46 +201,7 @@ def ml():
                 to='---------------'
                 )
         print(message.sid)        
-    elif (DL and Ip) == 0:
-        print("{} and {}".format(str(DL),str(Ip)))
-        print("normal")
-        text=Text(root,height=9,font=('calibri',13),foreground='black')
-        text.insert(INSERT,"MACHINE LEARNING AND IMAGE PROCESSING\n")
-        text.insert(INSERT,"Model Loaded\n")
-        text.insert(INSERT,"NORMAL")
-        text.pack()      
-        account_sid = '-----------------------------'
-        auth_token = '----------------------------'
-        client = Client(account_sid, auth_token)
-        message = client.messages \
-        .create(
-                body="You are Normal",
-                from_='-----------',
-                to='-----------------'
-                )
-        print(message.sid)
-    else:
-        print("{} and {}".format(str(DL),str(Ip)))
-        print("suspect")
-        text=Text(root,height=9, font=('calibri',13),foreground='black')
-        text.insert(INSERT,"MACHINE LEARNING AND IMAGE PROCESSING\n")
-        text.insert(INSERT,"Model Loaded\n")
-        text.insert(INSERT,"SUSPECT")
-        text.pack()
-        account_sid = 'AC681c3e2f099c76d20de81d3d64cefd78'
-        auth_token = '94c14aafe0c8f4b6b42734607372cc88'
-        client = Client(account_sid, auth_token)
-        message = client.messages \
-        .create(
-                body="You are a Suspect",
-                from_='-------------',
-                to='-------------'
-                )
-        print(message.sid)
-    k=cv2.imread('C:\\Users\\Puneeths\\Desktop\\Final project\\working1\\Accuracy.jpeg')
-    cv2.imshow('Model_Accuracy',k)
-    j=cv2.imread('C:\\Users\\Puneeths\\Desktop\\Final project\\working1\\Loss.jpeg')
-    cv2.imshow('Loss',j)
+   
 root = Tk()
 panelA = None
 panelB = None
@@ -269,3 +230,10 @@ btnip.pack(side="bottom", expand="no", padx="10", pady="10")
 btn = Button(root, text="Select an image", command=select_image)
 btn.pack(side="bottom",expand="no", padx="10", pady="10")
 root.mainloop()
+
+# ╔════════════════════════════════════════╗
+# ║          FOR THE FULL CODE/PROJECT     ║
+# ║           CONTACT:                     ║
+# ║           PUNEETHSPUNII@GMAIL.COM      ║
+# ║           +918296986769                ║
+# ╚════════════════════════════════════════╝
